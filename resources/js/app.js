@@ -1,8 +1,9 @@
-
-/**
- * First, we will load all of this project's Javascript utilities and other
- * dependencies. Then, we will be ready to develop a robust and powerful
- * application frontend using useful Laravel and JavaScript libraries.
- */
-
-require('./bootstrap');
+try {
+    window.Popper = require('popper.js').default;
+    window.$ = window.jQuery = require('jquery');
+    require('bootstrap');
+    require('@fortawesome/fontawesome-free/js/solid.js');
+    require('@fortawesome/fontawesome-free/js/regular.js');
+    require('@fortawesome/fontawesome-free/js/brands.js');
+    require('@fortawesome/fontawesome-free/js/fontawesome.js');
+} catch (e) {}
