@@ -10,3 +10,15 @@ The main technologies used in this branch are:
 * [Font Awesome 5](https://fontawesome.com/cheatsheet)
 * [Laravel 5.7](https://laravel.com/docs/5.7)
 * [PostgreSQL 10.6](https://www.postgresql.org/docs/10/static/index.html)
+
+## Development Environment
+
+* [Laravel Homestead](https://laravel.com/docs/5.7/homestead)
+
+## How to use
+
+Access the [Wiki](https://github.com/afgloeden/example-erp-laravel-bootstrap/wiki).
+
+## Contributing
+
+To contribute to the system, access the [CONTRIBUTING.md](https://github.com/afgloeden/example-erp-laravel-bootstrap/blob/master/CONTRIBUTING.md) file.
