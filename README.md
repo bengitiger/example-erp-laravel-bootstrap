@@ -1,6 +1,10 @@
 # ERP Example
 
-An example of an ERP system developed with [Laravel](https://laravel.com/), build with the preset bootstrap with the minimum of JavaScript.
+An example of an ERP system developed with [Laravel](https://laravel.com/), build with the preset bootstrap with the minimum of JavaScript. This is one of the projects to exemplify the Laravel presets. The projects are:
+
+* [example-erp-laravel-bootstrap](https://github.com/afgloeden/example-erp-laravel-bootstrap)
+* [example-erp-laravel-react](https://github.com/afgloeden/example-erp-laravel-react)
+* [example-erp-laravel-vuejs](https://github.com/afgloeden/example-erp-laravel-vuejs)
 
 ## Technologies used
 
