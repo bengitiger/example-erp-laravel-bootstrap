@@ -11,4 +11,6 @@ mix.js('resources/js/app.js', 'public/js')
       '@fortawesome/fontawesome-free/js/brands.js',
       '@fortawesome/fontawesome-free/js/fontawesome.js'
    ])
-   .version();
+   if (mix.inProduction()) {
+      mix.version();
+   }
