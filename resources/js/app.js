@@ -6,4 +6,6 @@ try {
     require('@fortawesome/fontawesome-free/js/regular.js');
     require('@fortawesome/fontawesome-free/js/brands.js');
     require('@fortawesome/fontawesome-free/js/fontawesome.js');
-} catch (e) {}
+} catch (e) {
+    console.log('Problems with JavaScript, please contact support. Error: ' + e);
+}
