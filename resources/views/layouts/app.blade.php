@@ -12,10 +12,10 @@
         <div class="container">
             <a href="{{ route('home') }}" class="navbar-brand mr-auto">{{ config('app.name') }}</a>
             @guest
-                @if(Request::is('register'))
-                    <a href="{{ route('login') }}" class="btn btn-outline-primary ml-auto"><i class="fas fa-sign-in-alt"></i> {{ __('Login') }}</a>
-                @else
+                @if(Request::is('login'))
                     <a href="{{ route('register') }}" class="btn btn-outline-primary ml-auto"><i class="fas fa-user-plus"></i> {{ __('Register') }}</a>
+                @else
+                    <a href="{{ route('login') }}" class="btn btn-outline-primary ml-auto"><i class="fas fa-sign-in-alt"></i> {{ __('Login') }}</a>
                 @endif
             @elseif(Request::is('profile'))
                 <form id="logout-form" action="{{ route('logout') }}" method="POST">
