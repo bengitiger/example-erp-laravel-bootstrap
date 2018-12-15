@@ -40,6 +40,7 @@ cp -v .env.example .env
 Configuring .env, change to your settings
 
 ```
+APP_NAME="ERP Example"
 APP_URL=http://localhost
 
 DB_CONNECTION=pgsql
@@ -48,6 +49,13 @@ DB_PORT=5432
 DB_DATABASE=homestead
 DB_USERNAME=homestead
 DB_PASSWORD=secret
+
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
 ```
 
 Dependencies of [Composer](https://getcomposer.org/doc/)
