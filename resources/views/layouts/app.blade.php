@@ -28,6 +28,9 @@
         </div>
     </nav>
     <main class="container my-3">
+        @if(session('status'))
+            <div class="alert alert-success mb-2">{{ session('status') }}</div>
+        @endif
         @if(isset($errors))
             @if($errors->any())
                 <ul class="list-group mb-2">
