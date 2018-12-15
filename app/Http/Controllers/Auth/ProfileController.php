@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 class ProfileController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Show the user information.
      *
      * @return \Illuminate\Http\Response
      */
