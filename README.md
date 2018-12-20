@@ -6,6 +6,10 @@ An example of an ERP system developed with [Laravel](https://laravel.com/), buil
 * [example-erp-laravel-react](https://github.com/afgloeden/example-erp-laravel-react)
 * [example-erp-laravel-vuejs](https://github.com/afgloeden/example-erp-laravel-vuejs)
 
+As a homogeneity between repositories is required, new ideas for ERP should be directed to the repository:
+
+* [example-erp-laravel-ideas](https://github.com/afgloeden/example-erp-laravel-ideas)
+
 ## Technologies used
 
 The main technologies used in this project are:
