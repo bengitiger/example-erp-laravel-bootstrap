@@ -14,7 +14,7 @@ As a homogeneity between repositories is required, new ideas for ERP should be d
 
 The main technologies used in this project are:
 
-* [Bootstrap 4.1](https://getbootstrap.com/docs/4.1/)
+* [Bootstrap 4.2](https://getbootstrap.com/docs/4.2/)
 * [Font Awesome 5](https://fontawesome.com/cheatsheet)
 * [Laravel 5.7](https://laravel.com/docs/5.7)
 * [PostgreSQL 10.6](https://www.postgresql.org/docs/10/static/index.html)
