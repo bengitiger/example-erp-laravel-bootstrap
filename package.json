@@ -9,11 +9,10 @@
         "prod": "npm run production",
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
         "tests": "php vendor/bin/phpunit --colors=auto --verbose --debug --stop-on-failure --stop-on-risky --stop-on-skipped --stop-on-incomplete --process-isolation"
-
     },
     "devDependencies": {
         "@fortawesome/fontawesome-free": "^5.6.3",
-        "bootstrap": "^4.0.0",
+        "bootstrap": "^4.2.1",
         "cross-env": "^5.1",
         "laravel-mix": "^4.0.12",
         "resolve-url-loader": "^2.3.1",
