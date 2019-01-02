@@ -6,8 +6,8 @@
         <caption>{{ __('Your information') }}</caption>
         <thead class="thead-light">
             <tr>
-                <th scope="col">{{ __('Information') }}</th>
-                <th scope="col">{{ __('Data') }}</th>
+                <th scope="col" width="30%">{{ __('Information') }}</th>
+                <th scope="col" width="70%">{{ __('Data') }}</th>
             </tr>
         </thead>
         <tbody>
