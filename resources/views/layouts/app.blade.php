@@ -9,14 +9,10 @@
 </head>
 <body>
     <nav class="navbar navbar-light bg-white border-bottom shadow-sm">
-        <div class="container">
-            <a href="{{ route('home') }}" class="navbar-brand mr-auto">{{ config('app.name') }}</a>
+        <div class="container-fluid">
+            <a href="{{ route('index') }}" class="navbar-brand mr-auto">{{ config('app.name') }}</a>
             @guest
-                @if(Request::is('login'))
-                    <a href="{{ route('register') }}" class="btn btn-outline-primary ml-auto"><i class="fas fa-user-plus"></i> {{ __('Register') }}</a>
-                @else
-                    <a href="{{ route('login') }}" class="btn btn-outline-primary ml-auto"><i class="fas fa-sign-in-alt"></i> {{ __('Login') }}</a>
-                @endif
+                <a href="{{ route('login') }}" class="btn btn-outline-primary ml-auto"><i class="fas fa-sign-in-alt"></i> {{ __('Login') }}</a>
             @elseif(Request::is('profile'))
                 <form id="logout-form" action="{{ route('logout') }}" method="POST">
                     @csrf
@@ -27,7 +23,7 @@
             @endguest
         </div>
     </nav>
-    <main class="container my-3">
+    <main class="container-fluid my-3">
         @if(session('status'))
             <div class="alert alert-success mb-2">{{ session('status') }}</div>
         @endif
