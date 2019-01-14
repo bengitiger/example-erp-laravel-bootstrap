@@ -30,7 +30,11 @@ To contribute to the system, access the [CONTRIBUTING.md][contributing-md-link] 
 
 ## How to use
 
-Access the [wiki][wiki-link].
+Access the [wiki][wiki-link]. If you want to save the Wiki, run the command bellow.
+
+```
+git clone https://github.com/afgloeden/example-erp-laravel-bootstrap.wiki.git
+```
 
 [laravel-link]: https://laravel.com/
 [example-erp-laravel-bootstrap-link]: https://github.com/afgloeden/example-erp-laravel-bootstrap
