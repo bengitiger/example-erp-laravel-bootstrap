@@ -24,10 +24,6 @@ The main technologies used in this project are:
 
 * [Laravel Homestead][laravel-homestead-link]
 
-## Contributing
-
-To contribute to the system, access the [CONTRIBUTING.md][contributing-md-link] file.
-
 ## How to use
 
 Access the [wiki][wiki-link]. If you want to save the Wiki, run the command bellow.
@@ -47,5 +43,4 @@ git clone https://github.com/afgloeden/example-erp-laravel-bootstrap.wiki.git
 [laravel-5-7-link]: https://laravel.com/docs/5.7
 [postgresql-10-6-link]: https://www.postgresql.org/docs/10/static/index.html
 [laravel-homestead-link]: https://laravel.com/docs/5.7/homestead
-[contributing-md-link]: https://github.com/afgloeden/example-erp-laravel-bootstrap/blob/master/CONTRIBUTING.md
 [wiki-link]: https://github.com/afgloeden/example-erp-laravel-bootstrap/wiki
