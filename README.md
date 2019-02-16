@@ -32,3 +32,4 @@ npm run tests
 ```
 
 [laravel-link]: https://laravel.com/
+[example-erp-laravel-ideas-link]: https://github.com/afgloeden/example-erp-laravel-ideas
