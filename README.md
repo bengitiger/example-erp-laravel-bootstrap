@@ -1,6 +1,9 @@
 # ERP Example
 
-An example of an ERP system developed with [Laravel][laravel-link], build with the preset bootstrap. For more information access [example-erp-laravel-ideas][example-erp-laravel-ideas-link] repository.
+An example of an ERP system developed with [Laravel][laravel-link], build with the preset bootstrap. Other presets can be found in:
+
+* [example-erp-laravel-react][example-erp-laravel-react-link]
+* [example-erp-laravel-vuejs][example-erp-laravel-vuejs-link]
 
 ## How to use
 
@@ -32,4 +35,5 @@ npm run tests
 ```
 
 [laravel-link]: https://laravel.com/
-[example-erp-laravel-ideas-link]: https://github.com/afgloeden/example-erp-laravel-ideas
+[example-erp-laravel-react-link]: https://github.com/afgloeden/example-erp-laravel-react
+[example-erp-laravel-vuejs-link]: https://github.com/afgloeden/example-erp-laravel-vuejs
