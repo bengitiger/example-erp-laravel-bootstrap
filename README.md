@@ -1,6 +1,6 @@
 # ERP Example
 
-An example of an ERP system developed with [Laravel][laravel-link], build with the preset bootstrap. Other presets can be found in:
+An example of an ERP system developed with [Laravel][laravel-link], build with the preset bootstrap and [PostgreSQL][postgresql-link] database. Other presets can be found in:
 
 * [example-erp-laravel-react][example-erp-laravel-react-link]
 * [example-erp-laravel-vuejs][example-erp-laravel-vuejs-link]
@@ -35,5 +35,6 @@ npm run tests
 ```
 
 [laravel-link]: https://laravel.com/
+[postgresql-link]: https://www.postgresql.org/docs/
 [example-erp-laravel-react-link]: https://github.com/afgloeden/example-erp-laravel-react
 [example-erp-laravel-vuejs-link]: https://github.com/afgloeden/example-erp-laravel-vuejs
