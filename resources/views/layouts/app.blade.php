@@ -12,7 +12,11 @@
         <div class="container-fluid">
             <a href="{{ route('index') }}" class="navbar-brand mr-auto">{{ config('app.name') }}</a>
             @guest
-                <a href="{{ route('login') }}" class="btn btn-outline-primary ml-auto"><i class="fas fa-sign-in-alt"></i> {{ __('Login') }}</a>
+                @if(Request::is('login'))
+                    <a href="{{ route('register') }}" class="btn btn-outline-primary ml-auto"><i class="fas fa-user-plus"></i> {{ __('Register') }}</a>
+                @else
+                    <a href="{{ route('login') }}" class="btn btn-outline-primary ml-auto"><i class="fas fa-sign-in-alt"></i> {{ __('Login') }}</a>
+                @endif
             @elseif(Request::is('profile'))
                 <form id="logout-form" action="{{ route('logout') }}" method="POST">
                     @csrf
