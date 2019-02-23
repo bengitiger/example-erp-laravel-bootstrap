@@ -10,15 +10,14 @@ An example of an ERP system developed with [Laravel][laravel-link], build with t
 ```shell
 git clone https://github.com/afgloeden/example-erp-laravel-bootstrap.git
 
-cp -v .env.example .env
-# Update .env to your settings
+# Copy .env.example to .env and update .env to your settings
 
 composer install
 composer dump-autoload -o
 
 php artisan key:generate
 
-php artisan migrate
+php artisan migrate:fresh
 php artisan db:seed
 
 npm install
