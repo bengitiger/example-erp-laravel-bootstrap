@@ -35,6 +35,6 @@ npm run tests
 ```
 
 [laravel-link]: https://laravel.com/
-[postgresql-link]: https://www.postgresql.org/docs/
+[postgresql-link]: https://www.postgresql.org/
 [example-erp-laravel-react-link]: https://github.com/afgloeden/example-erp-laravel-react
 [example-erp-laravel-vuejs-link]: https://github.com/afgloeden/example-erp-laravel-vuejs
