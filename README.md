@@ -17,8 +17,7 @@ composer dump-autoload -o
 
 php artisan key:generate
 
-php artisan migrate:fresh
-php artisan db:seed
+php artisan migrate:fresh --seed
 
 npm install
 npm run prod
@@ -27,11 +26,19 @@ php artisan route:cache
 php artisan config:cache
 ```
 
+Now connect with `E-Mail Address: admin@admin.local` and `Password: secret`.
+
 ## Tests
 
 ```shell
+# Test Data
+php artisan db:seed --class=TestDataSeeder
+
+# PHPUnit
 npm run tests
 ```
+
+> All passwords have the value `secret`.
 
 [laravel-link]: https://laravel.com/
 [postgresql-link]: https://www.postgresql.org/
