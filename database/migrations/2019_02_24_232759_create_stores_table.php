@@ -16,7 +16,6 @@ class CreateStoresTable extends Migration
         Schema::create('stores', function (Blueprint $table) {
             $table->increments('id')->unique();
             $table->unsignedInteger('company_id');
-            $table->unsignedInteger('ceo_id');
             $table->string('address');
             $table->string('phone');
             $table->boolean('home');
@@ -27,11 +26,6 @@ class CreateStoresTable extends Migration
                 ->foreign('company_id')
                 ->references('id')
                 ->on('companies')
-                ->onDelete('cascade');
-            $table
-                ->foreign('ceo_id')
-                ->references('id')
-                ->on('users')
                 ->onDelete('cascade');
         });
     }
