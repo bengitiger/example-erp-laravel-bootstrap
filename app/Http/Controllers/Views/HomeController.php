@@ -1,6 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Views;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -22,5 +25,17 @@ class HomeController extends Controller
     public function index()
     {
         return view('index');
+    }
+
+    /**
+     * Show the user information.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function profile()
+    {
+        return view('profile.index')->with([
+            'user' => Auth::user(),
+        ]);
     }
 }
