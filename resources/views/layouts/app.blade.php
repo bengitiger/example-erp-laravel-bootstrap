@@ -23,7 +23,7 @@
                     <button type="submit" class="btn btn-danger"><i class="fas fa-sign-out-alt"></i> {{ __('Logout') }}</button>
                 </form>
             @else
-                <a href="{{ route('profile.index') }}" class="btn btn-primary ml-auto"><i class="fas fa-user"></i> {{ __('My Profile') }}</a>
+                <a href="{{ route('profile') }}" class="btn btn-primary ml-auto"><i class="fas fa-user"></i> {{ __('My Profile') }}</a>
             @endguest
         </div>
     </nav>
