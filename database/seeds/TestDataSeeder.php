@@ -12,6 +12,6 @@ class TestDataSeeder extends Seeder
     public function run()
     {
         // Users
-        factory(App\Models\User::class, 10000)->create();
+        factory(App\User::class, 10000)->create();
     }
 }

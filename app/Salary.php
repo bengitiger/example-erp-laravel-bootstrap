@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Cart extends Model
+class Salary extends Model
 {
     //
 }
