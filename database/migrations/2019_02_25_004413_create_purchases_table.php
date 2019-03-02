@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\DB;
 
 class CreatePurchasesTable extends Migration
 {
@@ -14,13 +15,15 @@ class CreatePurchasesTable extends Migration
     public function up()
     {
         Schema::create('purchases', function (Blueprint $table) {
-            $table->bigIncrements('id')->unique();
-            $table->unsignedInteger('product_id');
-            $table->unsignedInteger('supplier_id');
+            $table->uuid('id')->unique();
+            $table->uuid('product_id');
+            $table->uuid('supplier_id');
             $table->integer('amount');
             $table->float('price_unit', 7, 2);
             $table->timestamp('created_at');
             $table->timestamp('updated_at');
+
+            $table->primary('id');
 
             $table
                 ->foreign('product_id')
@@ -33,6 +36,8 @@ class CreatePurchasesTable extends Migration
                 ->on('suppliers')
                 ->onDelete('cascade');
         });
+
+        DB::statement('ALTER TABLE purchases ALTER COLUMN id SET DEFAULT uuid_generate_v4();');
     }
 
     /**
