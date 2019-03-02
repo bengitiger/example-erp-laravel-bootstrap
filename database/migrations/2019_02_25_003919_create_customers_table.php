@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\DB;
 
 class CreateCustomersTable extends Migration
 {
@@ -14,7 +15,7 @@ class CreateCustomersTable extends Migration
     public function up()
     {
         Schema::create('customers', function (Blueprint $table) {
-            $table->bigIncrements('id')->unique();
+            $table->uuid('id')->unique();
             $table->string('name');
             $table->string('email');
             $table->string('phone');
@@ -22,7 +23,11 @@ class CreateCustomersTable extends Migration
             $table->string('address');
             $table->timestamp('created_at');
             $table->timestamp('updated_at');
+
+            $table->primary('id');
         });
+
+        DB::statement('ALTER TABLE customers ALTER COLUMN id SET DEFAULT uuid_generate_v4();');
     }
 
     /**
