@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\DB;
 
 class CreateDeliveriesTable extends Migration
 {
@@ -14,11 +15,13 @@ class CreateDeliveriesTable extends Migration
     public function up()
     {
         Schema::create('deliveries', function (Blueprint $table) {
-            $table->bigIncrements('id')->unique();
-            $table->unsignedInteger('cart_id');
-            $table->unsignedInteger('customer_id');
+            $table->uuid('id')->unique();
+            $table->uuid('cart_id');
+            $table->uuid('customer_id');
             $table->timestamp('created_at');
             $table->timestamp('updated_at');
+
+            $table->primary('id');
 
             $table
                 ->foreign('cart_id')
@@ -31,6 +34,8 @@ class CreateDeliveriesTable extends Migration
                 ->on('customers')
                 ->onDelete('cascade');
         });
+
+        DB::statement('ALTER TABLE deliveries ALTER COLUMN id SET DEFAULT uuid_generate_v4();');
     }
 
     /**
