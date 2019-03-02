@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\DB;
 
 class CreateSalariesTable extends Migration
 {
@@ -14,11 +15,13 @@ class CreateSalariesTable extends Migration
     public function up()
     {
         Schema::create('salaries', function (Blueprint $table) {
-            $table->bigIncrements('id')->unique();
-            $table->unsignedInteger('role_id');
+            $table->uuid('id')->unique();
+            $table->uuid('role_id');
             $table->float('value', 7, 2);
             $table->timestamp('created_at');
             $table->timestamp('updated_at');
+
+            $table->primary('id');
 
             $table
                 ->foreign('role_id')
@@ -26,6 +29,8 @@ class CreateSalariesTable extends Migration
                 ->on('roles')
                 ->onDelete('cascade');
         });
+
+        DB::statement('ALTER TABLE salaries ALTER COLUMN id SET DEFAULT uuid_generate_v4();');
     }
 
     /**
