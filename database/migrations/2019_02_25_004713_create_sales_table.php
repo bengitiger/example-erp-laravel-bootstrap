@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\DB;
 
 class CreateSalesTable extends Migration
 {
@@ -14,11 +15,13 @@ class CreateSalesTable extends Migration
     public function up()
     {
         Schema::create('sales', function (Blueprint $table) {
-            $table->integer('id');
-            $table->unsignedInteger('product_id');
+            $table->uuid('id');
+            $table->uuid('product_id');
             $table->integer('amount');
             $table->timestamp('created_at');
             $table->timestamp('updated_at');
+
+            $table->primary('id');
 
             $table
                 ->foreign('product_id')
@@ -26,6 +29,8 @@ class CreateSalesTable extends Migration
                 ->on('products')
                 ->onDelete('cascade');
         });
+
+        DB::statement('ALTER TABLE sales ALTER COLUMN id SET DEFAULT uuid_generate_v4();');
     }
 
     /**
