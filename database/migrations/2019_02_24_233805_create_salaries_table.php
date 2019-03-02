@@ -14,7 +14,7 @@ class CreateSalariesTable extends Migration
     public function up()
     {
         Schema::create('salaries', function (Blueprint $table) {
-            $table->increments('id')->unique();
+            $table->bigIncrements('id')->unique();
             $table->unsignedInteger('role_id');
             $table->float('value', 7, 2);
             $table->timestamp('created_at');

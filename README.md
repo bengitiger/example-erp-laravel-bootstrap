@@ -26,7 +26,7 @@ php artisan route:cache
 php artisan config:cache
 ```
 
-Now connect with `E-Mail Address: admin@admin.local` and `Password: secret`.
+Now connect with `E-Mail Address: admin@admin.local` and `Password: password`.
 
 ## Tests
 
@@ -38,7 +38,7 @@ php artisan db:seed --class=TestDataSeeder
 npm run tests
 ```
 
-> All passwords have the value `secret`.
+> All passwords have the value `password`.
 
 [laravel-link]: https://laravel.com/
 [postgresql-link]: https://www.postgresql.org/

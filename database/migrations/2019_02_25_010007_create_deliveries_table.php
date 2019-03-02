@@ -14,7 +14,7 @@ class CreateDeliveriesTable extends Migration
     public function up()
     {
         Schema::create('deliveries', function (Blueprint $table) {
-            $table->increments('id')->unique();
+            $table->bigIncrements('id')->unique();
             $table->unsignedInteger('cart_id');
             $table->unsignedInteger('customer_id');
             $table->timestamp('created_at');

@@ -19,9 +19,9 @@
         "popper.js": "^1.14.7",
         "purify-css": "^1.2.5",
         "purifycss-webpack": "^0.7.0",
-        "resolve-url-loader": "2.3.1",
+        "resolve-url-loader": "^2.3.1",
         "sass": "^1.17.2",
-        "sass-loader": "7.*",
+        "sass-loader": "^7.1.0",
         "vue-template-compiler": "^2.6.8"
     }
 }
