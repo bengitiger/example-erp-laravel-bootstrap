@@ -10,7 +10,8 @@ An example of an ERP system developed with [Laravel][laravel-link], build with t
 ```shell
 git clone https://github.com/afgloeden/example-erp-laravel-bootstrap.git
 
-# Copy .env.example to .env and update .env to your settings
+# Copy .env.example to .env
+# Update "APP_URL", database and email settings in .env
 
 composer install
 composer dump-autoload -o
@@ -32,7 +33,7 @@ Now connect with `E-Mail Address: admin@admin.local` and `Password: password`.
 
 ```shell
 # Test Data
-php artisan db:seed --class=TestDataSeeder
+php artisan db:seed --class=TestDataSeeder # This take a while ...
 
 # PHPUnit
 npm run tests
