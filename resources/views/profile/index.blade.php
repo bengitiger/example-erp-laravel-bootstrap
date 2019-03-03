@@ -27,6 +27,14 @@
                     <td class="text-success">{{ __('Verified') }}</td>
                 @endif
             </tr>
+            <tr>
+                <th scope="row">{{ __('Roles') }}</th>
+                <td>
+                    @foreach($user->employees as $employee)
+                        {{ $employee->role->name }}<br>
+                    @endforeach
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>
