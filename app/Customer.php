@@ -11,14 +11,35 @@ class Customer extends Model
      *
      * @var string
      */
-    protected $table    = 'customers';
+    protected $table      = 'customers';
+
+    /**
+     * The table primary key.
+     *
+     * @var string
+     */
+    protected $primaryKey = 'id';
+
+    /**
+     * The increment of the primary key.
+     *
+     * @var bool
+     */
+    public $incrementing  = false;
+
+    /**
+     * The type of the primary key..
+     *
+     * @var string
+     */
+    protected $keyType    = 'string';
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = [
+    protected $fillable   = [
         'name',
         'email',
         'phone',
@@ -31,10 +52,26 @@ class Customer extends Model
      *
      * @var array
      */
-    protected $guarded  = [
+    protected $guarded    = [
         'id',
         'created_at',
         'updated_at',
+    ];
+
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden     = [];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts      = [
+        'id' => 'string',
     ];
 
     /**
@@ -42,7 +79,7 @@ class Customer extends Model
      *
      * @var bool
      */
-    public $timestamps  = false;
+    public $timestamps    = false;
 
     /**
      * Get the deliveries for the customer.
