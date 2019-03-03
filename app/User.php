@@ -15,14 +15,35 @@ class User extends Authenticatable
      *
      * @var string
      */
-    protected $table    = 'users';
+    protected $table      = 'users';
+
+    /**
+     * The table primary key.
+     *
+     * @var string
+     */
+    protected $primaryKey = 'id';
+
+    /**
+     * The increment of the primary key.
+     *
+     * @var bool
+     */
+    public $incrementing  = false;
+
+    /**
+     * The type of the primary key..
+     *
+     * @var string
+     */
+    protected $keyType    = 'string';
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = [
+    protected $fillable   = [
         'name',
         'email',
         'password',
@@ -33,7 +54,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $guarded  = [
+    protected $guarded    = [
         'id',
         'email_verified_at',
         'remember_token',
@@ -46,7 +67,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $hidden   = [
+    protected $hidden     = [
         'password',
         'remember_token',
     ];
@@ -56,7 +77,8 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $casts    = [
+    protected $casts      = [
+        'id'                => 'string',
         'email_verified_at' => 'datetime',
     ];
 
@@ -65,7 +87,7 @@ class User extends Authenticatable
      *
      * @var bool
      */
-    public $timestamps  = false;
+    public $timestamps    = false;
 
     /**
      * Get the employees for the user.
