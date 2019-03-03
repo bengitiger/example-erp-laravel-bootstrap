@@ -11,14 +11,35 @@ class Purchase extends Model
      *
      * @var string
      */
-    protected $table    = 'purchases';
+    protected $table      = 'purchases';
+
+    /**
+     * The table primary key.
+     *
+     * @var string
+     */
+    protected $primaryKey = 'id';
+
+    /**
+     * The increment of the primary key.
+     *
+     * @var bool
+     */
+    public $incrementing  = false;
+
+    /**
+     * The type of the primary key..
+     *
+     * @var string
+     */
+    protected $keyType    = 'string';
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = [
+    protected $fillable   = [
         'amount',
         'price_unit',
     ];
@@ -28,7 +49,7 @@ class Purchase extends Model
      *
      * @var array
      */
-    protected $guarded  = [
+    protected $guarded    = [
         'id',
         'product_id',
         'supplier_id',
@@ -37,11 +58,27 @@ class Purchase extends Model
     ];
 
     /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden     = [];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts      = [
+        'id' => 'string',
+    ];
+
+    /**
      * Indicates if the model should be timestamped.
      *
      * @var bool
      */
-    public $timestamps  = false;
+    public $timestamps    = false;
 
     /**
      * Get the product that owns the purchase.
